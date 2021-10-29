@@ -10,14 +10,19 @@ const Header = () => {
             <nav>
                 <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
                     <Container>
-                        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                        <Navbar.Brand>Navbar</Navbar.Brand>
                         <NavbarToggle />
-                        <Nav className="me-auto">
-                            <NavLink className="link" to="/home">Home</NavLink>
-                            <NavLink className="link" to="/home">Home</NavLink>
-                            <NavLink className="link" to="/features">Features</NavLink>
-                            <NavLink className="link" to="/pricing">Pricing</NavLink>
-                        </Nav>
+                        <Navbar.Collapse className="justify-content-end">
+                            <Nav>
+                                <NavLink className="link" to="/home">Home</NavLink>
+                                <NavLink className="link" to="/home">Home</NavLink>
+                                <NavLink className="link" to="/features">Features</NavLink>
+                                <NavLink className="link" to="/pricing">Pricing</NavLink>
+                            </Nav>
+                        </Navbar.Collapse>
+
+
+
                     </Container>
                 </Navbar>
             </nav>

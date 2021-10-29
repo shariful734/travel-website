@@ -1,0 +1,27 @@
+.topPlace1-card{
+    background-image: url(../../../images/topPlace1.jpg);
+    height: 450px;
+}
+
+.topPlace2-card{
+    background-image: url(../../../images/topPlace2.jpg);
+    height: 450px;
+}
+
+.topPlace3-card{
+    background-image: url(../../../images/topPlace3.jpg);
+    height: 450px;
+}
+
+.card-detail{
+    margin-top: 270px;
+    color:goldenrod;   
+}
+
+.card-detail :hover{
+    background-color:rgb(197, 225, 236);
+}
+
+
+
+
