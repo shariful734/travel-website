@@ -13,10 +13,10 @@ const Header = () => {
                         <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                         <NavbarToggle />
                         <Nav className="me-auto">
-                            <NavLink to="/home">Home</NavLink>
-                            <NavLink to="/home">Home</NavLink>
-                            <NavLink to="/features">Features</NavLink>
-                            <NavLink to="/pricing">Pricing</NavLink>
+                            <NavLink className="link" to="/home">Home</NavLink>
+                            <NavLink className="link" to="/home">Home</NavLink>
+                            <NavLink className="link" to="/features">Features</NavLink>
+                            <NavLink className="link" to="/pricing">Pricing</NavLink>
                         </Nav>
                     </Container>
                 </Navbar>
