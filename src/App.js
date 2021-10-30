@@ -7,25 +7,39 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './Pages/NotFound/NotFound';
 import TopPlaces from './Pages/Home/TopPlaces/TopPlaces';
 import About from './Pages/Home/About/About';
+import Home from './Pages/Home/Home/Home';
+import AuthProvider from './Context/AuthProvider';
+import LogIn from './Pages/LogIn/LogIn';
 
 function App() {
   return (
     <div className="">
 
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route path="/Home">
-            <Banner></Banner>
-            <About></About>
-            <TopPlaces></TopPlaces>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
 
-        </Switch>
-      </Router>
+            <Route path="/Home">
+              <Banner></Banner>
+              <About></About>
+              <TopPlaces></TopPlaces>
+            </Route>
+
+            <Route path="/LogIn">
+              <LogIn></LogIn>
+            </Route>
+
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+
+          </Switch>
+        </Router>
+      </AuthProvider>
 
 
 

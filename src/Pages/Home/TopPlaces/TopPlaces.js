@@ -1,6 +1,9 @@
 import './TopPlaces.css';
 import React from 'react';
 import { Card, Col, Row } from 'react-bootstrap';
+import topPlace1 from '../../../images/topPlace1.jpg';
+import topPlace2 from '../../../images/topPlace2.jpg';
+import topPlace3 from '../../../images/topPlace3.jpg';
 
 const TopPlaces = () => {
     return (
@@ -10,55 +13,43 @@ const TopPlaces = () => {
             <Row xs={1} md={2} lg={3} className="g-4">
 
                 <Col>
-                    <Card className="topPlace1-card">
+                    <Card>
+                        <Card.Img className="card-img" variant="top" src={topPlace1} />
 
-                        <div className="card-detail">
-                            <Card.Body>
-                                <Card.Title className="fs-2">Brazil</Card.Title>
-                                <Card.Text>
-                                    <ul>
-                                        <li>Cristo Redentor and Corcovado, Rio de Janeiro</li>
-                                        <li>Iguaçu Falls</li>
-                                        <li>Ipanema</li>
-                                    </ul>
-                                </Card.Text>
-                            </Card.Body>
-                        </div>
+                        <Card.Body>
+                            <Card.Title className="fs-2">Brazil</Card.Title>
+                            <Card.Text>
+                                <h4>City : Rio de Janeiro</h4>
+                            </Card.Text>
+                        </Card.Body>
+
                     </Card>
                 </Col>
 
                 <Col>
-                    <Card className="topPlace2-card">
+                    <Card>
+                        <Card.Img className="card-img" variant="top" src={topPlace2} />
 
-                        <div className="card-detail">
-                            <Card.Body>
-                                <Card.Title className="fs-2">Indonesia</Card.Title>
-                                <Card.Text>
-                                    <ul>
-                                        <li>Bali</li>
-                                        <li> Raja Ampat Islands</li>
-                                        <li>Yogyakarta</li>
-                                    </ul>
-                                </Card.Text>
-                            </Card.Body>
-                        </div>
+                        <Card.Body>
+                            <Card.Title className="fs-2">Indonesia</Card.Title>
+                            <Card.Text>
+                                <h4>City : Jakarat</h4>
+                            </Card.Text>
+                        </Card.Body>
+
                     </Card>
                 </Col>
                 <Col>
-                    <Card className="topPlace3-card">
+                    <Card>
+                        <Card.Img className="card-img" variant="top" src={topPlace3} />
 
-                        <div className="card-detail">
-                            <Card.Body>
-                                <Card.Title className="fs-2">Germany</Card.Title>
-                                <Card.Text>
-                                    <ul>
-                                        <li>The Black Forest</li>
-                                        <li>Fairytale Castle: Neuschwanstein</li>
-                                        <li>Munich's Marienplatz</li>
-                                    </ul>
-                                </Card.Text>
-                            </Card.Body>
-                        </div>
+                        <Card.Body>
+                            <Card.Title className="fs-2">Germany</Card.Title>
+                            <Card.Text>
+                                <h4>City : Berlin</h4>
+                            </Card.Text>
+                        </Card.Body>
+
                     </Card>
                 </Col>
 

@@ -1,33 +1,35 @@
 import './Header.css';
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import useAuth from '../../../hooks/useAuth';
+
 
 const Header = () => {
+
+    const { user, logout } = useAuth();
+
     return (
         <div>
-            <nav>
-                <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
-                    <Container>
-                        <Navbar.Brand>Navbar</Navbar.Brand>
-                        <NavbarToggle />
-                        <Navbar.Collapse className="justify-content-end">
-                            <Nav>
-                                <NavLink className="link" to="/home">Home</NavLink>
-                                <NavLink className="link" to="/home">Home</NavLink>
-                                <NavLink className="link" to="/features">Features</NavLink>
-                                <NavLink className="link" to="/pricing">Pricing</NavLink>
-                            </Nav>
-                        </Navbar.Collapse>
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Container>
+                    <Navbar.Brand>Globe Plus</Navbar.Brand>
+                    <Navbar.Toggle />
+                    <NavbarCollapse className="justify-content-end">
+                        <NavLink className="link" to="/home">Home</NavLink>
+                        <span className="text-white">{user?.displayName}</span>
+                        {user?.email ?
+                            < Button onClick={logout} variant="danger">LogOut</Button> :
+                            <NavLink className="link" to="/LogIn">LogIn</NavLink>
+                        }
 
 
+                    </NavbarCollapse>
+                </Container>
+            </Navbar>
 
-                    </Container>
-                </Navbar>
-            </nav>
-
-        </div>
+        </div >
     );
 };
 
