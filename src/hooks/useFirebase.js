@@ -29,11 +29,13 @@ const useFirebase = () => {
             else {
                 setUser({});
             }
+            setIsLoading(false);
         });
         return () => unsubscribe;
     }, []);
 
     const logout = () => {
+        setIsLoading(true);
         signOut(auth)
             .then(() => {
                 setUser({})
@@ -43,7 +45,8 @@ const useFirebase = () => {
     return {
         user,
         signInUsingGoogle,
-        logout
+        logout,
+        isLoading
 
     };
 }

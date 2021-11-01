@@ -17,7 +17,7 @@ const TopPlaces = () => {
                         <Card.Img className="card-img" variant="top" src={topPlace1} />
 
                         <Card.Body>
-                            <Card.Title className="fs-2">Brazil</Card.Title>
+                            <Card.Title className="fs-2"><h1>Brazil</h1></Card.Title>
                             <Card.Text>
                                 <h4>City : Rio de Janeiro</h4>
                             </Card.Text>
@@ -31,7 +31,7 @@ const TopPlaces = () => {
                         <Card.Img className="card-img" variant="top" src={topPlace2} />
 
                         <Card.Body>
-                            <Card.Title className="fs-2">Indonesia</Card.Title>
+                            <Card.Title className="fs-2"><h1>Indonesia</h1></Card.Title>
                             <Card.Text>
                                 <h4>City : Jakarat</h4>
                             </Card.Text>
@@ -44,7 +44,7 @@ const TopPlaces = () => {
                         <Card.Img className="card-img" variant="top" src={topPlace3} />
 
                         <Card.Body>
-                            <Card.Title className="fs-2">Germany</Card.Title>
+                            <Card.Title className="fs-2"><h1>Germany</h1></Card.Title>
                             <Card.Text>
                                 <h4>City : Berlin</h4>
                             </Card.Text>

@@ -1,19 +1,22 @@
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Banner from './Pages/Home/Banner/Banner';
 import Header from './Pages/Shared/Header/Header';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NotFound from './Pages/NotFound/NotFound';
-import TopPlaces from './Pages/Home/TopPlaces/TopPlaces';
-import About from './Pages/Home/About/About';
 import Home from './Pages/Home/Home/Home';
 import AuthProvider from './Context/AuthProvider';
 import LogIn from './Pages/LogIn/LogIn';
+import AddCountry from './Pages/AddCountry/AddCountry';
+import Booking from './Pages/Booking/Booking/Booking';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Footer from './Pages/Shared/Footer/Footer';
+import MyBooking from './Pages/Booking/MyBooking/MyBooking';
+import AllBooking from './Pages/Booking/AllBooking/AllBooking';
 
 function App() {
   return (
-    <div className="">
+    <div className="body-container">
 
       <AuthProvider>
         <Router>
@@ -24,20 +27,36 @@ function App() {
             </Route>
 
             <Route path="/Home">
-              <Banner></Banner>
-              <About></About>
-              <TopPlaces></TopPlaces>
+              <Home></Home>
             </Route>
 
             <Route path="/LogIn">
               <LogIn></LogIn>
             </Route>
 
+            <PrivateRoute path="/booking/:bookingId">
+              <Booking></Booking>
+            </PrivateRoute>
+
+            <PrivateRoute path="/AddCountry">
+              <AddCountry></AddCountry>
+            </PrivateRoute>
+
+            <PrivateRoute path="/MyBooking">
+              <MyBooking></MyBooking>
+            </PrivateRoute>
+
+            <PrivateRoute path="/AllBooking">
+              <AllBooking></AllBooking>
+            </PrivateRoute>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
 
           </Switch>
+
+          <Footer></Footer>
         </Router>
       </AuthProvider>
 
