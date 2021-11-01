@@ -26,7 +26,7 @@ const Booking = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:8000/userdata', data)
+        axios.post('https://nameless-thicket-79075.herokuapp.com/userdata', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('book successfully');

@@ -4,14 +4,20 @@ const MyBooking = () => {
 
     const [myBooking, setMyBooking] = useState([]);
 
-    useEffect('http://localhost:8000/userdata')
+    useEffect('https://nameless-thicket-79075.herokuapp.com/userdata')
         .then(res => res.json())
         .then(data => setMyBooking(data))
     return (
         <div>
-            <h3>{myBooking.CountryName}</h3>
-            <h3>{myBooking.phoneNo}</h3>
-            <h3>{myBooking.description}</h3>
+
+            {
+                myBooking.map(Booking => <div>
+                    <h3>{Booking.CountryName}</h3>
+                    <h3>{Booking.phoneNo}</h3>
+                    <h3>{Booking.description}</h3>
+                </div>)
+            }
+
         </div>
     );
 };

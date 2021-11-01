@@ -7,7 +7,7 @@ const Services = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:8000/countries')
+        fetch('https://nameless-thicket-79075.herokuapp.com/countries')
             .then(res => res.json())
             .then(data => setCountries(data))
 
