@@ -10,7 +10,7 @@ const AddCountry = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:8000/countries', data)
+        axios.post('https://nameless-thicket-79075.herokuapp.com/countries', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added a data successfully');
@@ -29,7 +29,7 @@ const AddCountry = () => {
                 <textarea  {...register("description",)} placeholder="description" />
                 <input {...register("img",)} placeholder="img URL" />
 
-                <input className="bg-success" type="submit" />
+                <button className="bg-success" type="submit" >add country Now</button>
             </form>
 
         </div >

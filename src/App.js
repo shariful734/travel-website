@@ -42,7 +42,7 @@ function App() {
               <AddCountry></AddCountry>
             </PrivateRoute>
 
-            <PrivateRoute path="/MyBooking">
+            <PrivateRoute path="/myBooking/:myBookingId">
               <MyBooking></MyBooking>
             </PrivateRoute>
 

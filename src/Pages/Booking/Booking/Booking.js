@@ -9,6 +9,7 @@ import axios from 'axios';
 const Booking = () => {
 
 
+
     const { bookingId } = useParams();
 
     const [Country, setCountry] = useState({});
@@ -16,7 +17,7 @@ const Booking = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:8000/countries/${bookingId}`)
+        fetch(`https://nameless-thicket-79075.herokuapp.com/countries/${bookingId}`)
             .then(res => res.json())
             .then(data => setCountry(data));
     }, []);
@@ -44,14 +45,14 @@ const Booking = () => {
 
                     <h1 className="my-4">Place The Booking  </h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <input value={user.displayName} {...register} />
-                        <input value={user.email} {...register} />
-                        <input placeholder="countryName" {...register("CountryName",)} />
+                        <input value={user.displayName} {...register("customerName")} />
+                        <input value={user.email} {...register("email",)} />
+                        <input placeholder="countryName" {...register("countryName",)} />
                         <input placeholder="PhoneNo"  {...register("phoneNo:", { required: true, maxLength: 20 })} />
-                        <textarea  {...register("Address",)} placeholder="description" />
+                        <textarea  {...register("Address",)} placeholder="address" />
 
 
-                        <input className="bg-success" type="submit" placeholder="Book Now" />
+                        <button className="bg-success" type="submit" >  Book Now</button>
                     </form>
 
                 </div>
