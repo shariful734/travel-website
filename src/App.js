@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import MyBooking from './Pages/Booking/MyBooking/MyBooking';
 import AllBooking from './Pages/Booking/AllBooking/AllBooking';
+import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
 
             <Route path="/Home">
               <Home></Home>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
             </Route>
 
             <Route path="/LogIn">

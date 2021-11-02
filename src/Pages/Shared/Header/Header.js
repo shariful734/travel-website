@@ -18,6 +18,7 @@ const Header = () => {
                     <Navbar.Toggle />
                     <NavbarCollapse className="justify-content-end">
                         <NavLink className="link" to="/home">Home</NavLink>
+                        <NavLink className="link" to="/services">Services</NavLink>
                         {
                             user.email && <NavLink className="link" to="/MyBooking">My Booking</NavLink>
                         }

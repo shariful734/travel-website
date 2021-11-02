@@ -12,7 +12,7 @@ const Booking = () => {
 
     const { bookingId } = useParams();
 
-    const [Country, setCountry] = useState({});
+    const [country, setCountry] = useState({});
 
     const { user } = useAuth();
 
@@ -59,11 +59,11 @@ const Booking = () => {
                 <div>
                     <Col>
                         <Card className="card-body">
-                            <Card.Img className="country-img" variant="top" src={Country.img} />
+                            <Card.Img className="country-img" variant="top" src={country.img} />
                             <Card.Body>
-                                <Card.Title>{Country.name}</Card.Title>
+                                <Card.Title>{country.name}</Card.Title>
                                 <Card.Text >
-                                    {Country.description}
+                                    {country.description}
                                 </Card.Text>
 
                             </Card.Body>

@@ -8,7 +8,7 @@ const AllBooking = () => {
         fetch("https://nameless-thicket-79075.herokuapp.com/userdata")
             .then(res => res.json())
             .then(data => setAllBooking(data));
-    }, []);
+    }, [allBooking]);
     return (
         <div>
             {
